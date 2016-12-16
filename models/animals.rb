@@ -12,7 +12,6 @@ class Animal
     @admission_date = options['admission_date']
     @status = options['status']
     @photo = options['photo']
-    
   end
 
   def save
@@ -23,6 +22,35 @@ class Animal
       "
       animal = SqlRunner.run( sql ).first
       id = animal['id'].to_i
+  end
+
+  def self.delete_all
+    sql = "DELETE FROM animals"
+    SqlRunner.run( sql )
+  end
+
+  def self.find_all()
+    sql = "SELECT * FROM animals"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Animal.new( hash ) }
+  end
+
+  def self.find_available
+    sql = "SELECT * FROM animals WHERE status = 'ready for adoption';"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Animal.new( hash ) }
+  end
+
+  def self.find_adopted
+    sql = "SELECT * FROM animals WHERE status = 'adopted';"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Animal.new( hash ) }
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM animals WHERE id=#{id};"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Animal.new( hash ) }
   end
 
 end

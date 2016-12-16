@@ -24,5 +24,16 @@ class Owner
     @id = owner['id'].to_i
   end
 
+  def self.delete_all
+    sql = "DELETE FROM owners"
+    SqlRunner.run( sql )
+  end
+
+  def self.find_all()
+    sql = "SELECT * FROM owners"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Owner.new( hash ) }
+  end
+
 end
 

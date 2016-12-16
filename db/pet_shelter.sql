@@ -1,3 +1,5 @@
+
+DROP TABLE adoptions;
 DROP TABLE animals;
 DROP TABLE owners;
 
