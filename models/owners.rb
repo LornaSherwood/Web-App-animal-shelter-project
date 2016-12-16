@@ -14,4 +14,15 @@ class Owner
     @address_3 = options['address_3']
   end
 
+  def save
+    sql = "
+      INSERT INTO owners (first_name, last_name, address_1, address_2, address_3)
+      VALUES ( '#{first_name}', '#{last_name}', '#{address_1}', '#{address_2}', '#{address_3}')
+      RETURNING id;
+      "
+    owner = SqlRunner.run( sql ).first
+    @id = owner['id'].to_i
+  end
+
 end
+
