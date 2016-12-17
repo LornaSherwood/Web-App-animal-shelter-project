@@ -53,4 +53,16 @@ class Animal
     return Animal.new(results)
   end
 
+  def self.update(options)
+    sql = "UPDATE animals SET
+     name = '#{options['name']}',
+     breed = '#{options['breed']}',
+     admission_date = '#{options['admission_date']}',
+     status = '#{options['status']}',
+     photo = '#{options['photo']}'
+     WHERE id='#{options['id']}';"
+    SqlRunner.run( sql )
+  end
+
 end
+

@@ -4,6 +4,7 @@ require_relative('../models/adoptions')
 
 require( 'pry' )
 
+Adoption.delete_all()
 Owner.delete_all()
 Animal.delete_all()
 

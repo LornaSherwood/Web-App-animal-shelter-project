@@ -1,0 +1,57 @@
+<h1>Edit Animal Details</h1>
+
+<form action="/animals/<%= @animal.id %>" method="post">
+  <label>
+  Name:
+  <input 
+    type="text"
+    name="name"
+   value="<%= @animal.name %>"
+  >
+  </label>
+
+  <label>
+  Breed:
+  <input 
+    type="text" 
+    name="breed" 
+    value="<%= @animal.breed%>"
+  >
+  </label>
+
+  <label>
+  Admission date (YYYY-MM-DD):
+  <input 
+    type="date" 
+    name="admission_date"
+    value="<%= @animal.admission_date %>"
+  >
+  </label>
+
+
+  <label>
+  Select a status:
+    <select name="status">
+      <option 
+      <%= "selected" if @animal.status == "unassessed" %>
+      value="unassessed">Unassessed</option>
+      <option 
+      <%= "selected" if @animal.status == "in training" %>
+      value="in training">In training</option>
+      <option 
+      <%= "selected" if @animal.status == "under vet care" %>
+      value="under vet care">Under vet care</option>
+      <option 
+      <%= "selected" if @animal.status == "ready for adoption" %>
+      value="ready for adoption">Ready for adoption</option>
+      <option 
+      <%= "selected" if @animal.status == "adopted" %>
+      value="adopted">Adopted</option>
+    </select>
+  </label>
+
+ 
+
+  <input type="submit" value="Update Details"> 
+
+</form>
