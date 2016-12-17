@@ -1,0 +1,17 @@
+<h1>Our Owners</h1>
+
+
+
+<% for owner in @owners %>
+<div class = 'owner'> 
+<hr>
+<p>Name: <%= owner.first_name %> <%= owner.last_name %></p>
+<p>Location: <%= owner.address_2 %> 
+
+
+
+
+<p><a href="/owners/<%= owner.id %>">Show owner details</a></p> 
+<hr>
+</div>
+<% end %>

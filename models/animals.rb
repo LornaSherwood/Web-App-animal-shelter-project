@@ -18,10 +18,10 @@ class Animal
     sql = "
       INSERT INTO animals (name, breed, admission_date, status, photo)
       VALUES ('#{name}', '#{breed}', '#{admission_date}', '#{status}', '#{photo}')
-      RETURNING id;
+      RETURNING *;
       "
       animal = SqlRunner.run( sql ).first
-      id = animal['id'].to_i
+      @id = animal['id'].to_i
   end
 
   def self.delete_all
