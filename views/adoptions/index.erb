@@ -1,0 +1,16 @@
+<h1>Adoptions</h1>
+
+<ul>
+  <% for adoption in @adoptions %>
+    <div class = 'animal'> 
+    <li>
+      <p>Owner: <%= adoption.owner.first_name %> <%= adoption.owner.last_name  %></p>
+      <img src="<%= adoption.animal.photo %>" alt="animal pic" style="height:150px;width:200px;">
+      <p>Name: <%= adoption.animal.name %></p>
+      <p>Breed: <%= adoption.animal.breed %></p>
+      
+    </li>
+    </div>
+
+  <% end %>
+</ul>

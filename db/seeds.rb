@@ -25,6 +25,8 @@ animal4.save
 
 adoption1 = Adoption.new({'animal_id' => animal1.id, 'owner_id' => owner1.id})
 adoption1.save
+adoption2 = Adoption.new({'animal_id' => animal4.id, 'owner_id' => owner2.id})
+adoption2.save
 
 binding.pry
 nil
