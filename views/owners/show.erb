@@ -5,3 +5,16 @@
   <li> <%= @owner.address_2 %></li>
   <li> <%= @owner.address_3 %></li>
 </ul></p>
+
+<p>Animals adopted by <%= @owner.first_name %>:</p>
+<% for animal in @owner.get_animals %>
+<div class = 'animal'> 
+<img src="<%= animal.photo %>" alt="animal pic" style="height:150px;width:200px;">
+<p>Name: <%= animal.name %></p>
+<p>Breed: <%= animal.breed %></p>
+<p>Admission date: <%= animal.admission_date %></p>
+
+<p><a href="/animals/<%= animal.id %>">Show animal details</a></p> 
+
+</div>
+<% end %>

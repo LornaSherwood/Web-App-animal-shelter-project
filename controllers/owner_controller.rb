@@ -12,6 +12,18 @@ get '/owners' do
   erb(:"owners/index")
 end
 
+# create new owner form
+get '/owners/new' do
+  erb(:"owners/new")
+end
+
+#create new owner
+post '/owners' do
+  @owner = Owner.new(params)
+  @owner.save
+  erb(:"/owners/create")
+end
+
 #get animal by id (show)
 get '/owners/:id' do
   id = params[:id]

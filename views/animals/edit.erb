@@ -50,6 +50,15 @@
     </select>
   </label>
 
+  <!-- add photo so doesn't get removed when update -->
+  <label>
+  Photo:
+  <input 
+    type="text" 
+    name="photo" 
+    value="<%= @animal.photo%>"
+  >
+  </label>
  
 
   <input type="submit" value="Update Details"> 

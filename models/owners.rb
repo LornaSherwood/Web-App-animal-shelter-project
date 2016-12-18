@@ -39,7 +39,14 @@ class Owner
     sql = "SELECT * FROM owners WHERE id=#{id};"
     results = SqlRunner.run( sql ).first
     return Owner.new(results)
-    
+  end
+
+  def get_animals
+    sql = "SELECT animals.* FROM animals 
+          INNER JOIN adoptions ON adoptions.animal_id = animals.id 
+          WHERE owner_id = #{@id};"
+    results = SqlRunner.run( sql )
+    return results.map { |animal| Animal.new( animal ) }
   end
 
 end
