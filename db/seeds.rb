@@ -13,10 +13,10 @@ owner2 = Owner.new({'first_name' => 'Julia', 'last_name' => 'Franzoi', 'address_
 owner1.save
 owner2.save
 
-animal1 = Animal.new({'name' => 'Misty', 'breed' => 'Collie', 'admission_date' => '2016-12-01', 'status' => 'adopted', 'photo' => '/images/Misty.jpg' })
-animal2 = Animal.new({'name' => 'Breagha', 'breed' => 'Maine Coone', 'admission_date' => '2016-11-20', 'status' => 'in training', 'photo' => '/images/breagha.jpg' })
-animal3 = Animal.new({'name' => 'Smudge', 'breed' => 'Guinea Pig', 'admission_date' => '2016-10-08', 'status' => 'ready for adoption', 'photo' => '/images/smudge.jpg' })
-animal4 = Animal.new({'name' => 'Alfie', 'breed' => 'Lurcher', 'admission_date' => '2016-11-03', 'status' => 'under vet care', 'photo' => '/images/alfie.jpg' })
+animal1 = Animal.new({'name' => 'Misty', 'breed' => 'Collie', 'admission_date' => '2016-12-01', 'status' => 'Adopted', 'photo' => '/images/Misty.jpg' })
+animal2 = Animal.new({'name' => 'Breagha', 'breed' => 'Maine Coone', 'admission_date' => '2016-11-20', 'status' => 'In Training', 'photo' => '/images/breagha.jpg' })
+animal3 = Animal.new({'name' => 'Smudge', 'breed' => 'Guinea Pig', 'admission_date' => '2016-10-08', 'status' => 'Ready for Adoption', 'photo' => '/images/smudge.jpg' })
+animal4 = Animal.new({'name' => 'Alfie', 'breed' => 'Lurcher', 'admission_date' => '2016-11-03', 'status' => 'Under Vet Care', 'photo' => '/images/alfie.jpg' })
 animal1.save
 animal2.save
 animal3.save

@@ -41,13 +41,13 @@ class Animal
   end
 
   def self.find_available
-    sql = "SELECT * FROM animals WHERE status = 'ready for adoption';"
+    sql = "SELECT * FROM animals WHERE status = 'Ready for Adoption';"
     results = SqlRunner.run( sql )
     return results.map { |hash| Animal.new( hash ) }
   end
 
   def self.find_adopted
-    sql = "SELECT * FROM animals WHERE status = 'adopted';"
+    sql = "SELECT * FROM animals WHERE status = 'Adopted';"
     results = SqlRunner.run( sql )
     return results.map { |hash| Animal.new( hash ) }
   end

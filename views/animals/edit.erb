@@ -33,19 +33,19 @@
   Select a status:
     <select name="status">
       <option 
-      <%= "selected" if @animal.status == "unassessed" %>
+      <%= "selected" if @animal.status == "Unassessed" %>
       value="unassessed">Unassessed</option>
       <option 
-      <%= "selected" if @animal.status == "in training" %>
-      value="in training">In training</option>
+      <%= "selected" if @animal.status == "In Training" %>
+      value="in training">In Training</option>
       <option 
-      <%= "selected" if @animal.status == "under vet care" %>
-      value="under vet care">Under vet care</option>
+      <%= "selected" if @animal.status == "Under Vet Care" %>
+      value="under vet care">Under Vet Care</option>
       <option 
-      <%= "selected" if @animal.status == "ready for adoption" %>
-      value="ready for adoption">Ready for adoption</option>
+      <%= "selected" if @animal.status == "Ready for Adoption" %>
+      value="ready for adoption">Ready for Adoption</option>
       <option 
-      <%= "selected" if @animal.status == "adopted" %>
+      <%= "selected" if @animal.status == "Adopted" %>
       value="adopted">Adopted</option>
     </select>
   </label>

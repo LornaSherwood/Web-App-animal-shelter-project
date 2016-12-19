@@ -23,7 +23,8 @@ end
 post '/adoptions' do
   @adoption = Adoption.new( params )
   @adoption.save
-  erb(:"adoptions/create")
+  @adoption.update_status  # to change animal status to adopted
+  redirect to('/adoptions')
 end
 
 # delete by id

@@ -37,4 +37,14 @@ post '/owners/:id/delete' do
   redirect to('/owners')
 end
 
+# edit animal form
+get '/owners/:id/edit' do
+ @owner = Owner.find(params[:id])
+ erb(:"owners/edit")
+end
 
+# update animal by id
+post '/owners/:id' do  
+  Owner.update( params ) 
+  redirect to("/owners/#{params[:id]}")
+end

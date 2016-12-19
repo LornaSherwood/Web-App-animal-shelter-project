@@ -55,8 +55,15 @@ class Adoption
       results = SqlRunner.run( sql )
       return Animal.new( results.first )
   end
+
+  def update_status
+    animal1 = animal() # find animal in question
+    animal1.status = 'Adopted' # change status to adopted
+    # sql: update the status column in the animal table, on the row of 'animal1'
+    sql = "UPDATE animals SET ( status ) = ( '#{animal1.status}' ) WHERE id = #{animal1.id};"
+    SqlRunner.run( sql )
+  end
+
 end
-
-
 
 

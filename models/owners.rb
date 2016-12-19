@@ -54,5 +54,16 @@ class Owner
     return results.map { |animal| Animal.new( animal ) }
   end
 
+  def self.update(options)
+    sql = "UPDATE owners SET
+     first_name = '#{options['first_name']}',
+     last_name = '#{options['last_name']}',
+     address_1 = '#{options['address_1']}',
+     address_2 = '#{options['address_2']}',
+     address_3 = '#{options['address_3']}'
+     WHERE id='#{options['id']}';"
+    SqlRunner.run( sql )
+  end
+
 end
 
