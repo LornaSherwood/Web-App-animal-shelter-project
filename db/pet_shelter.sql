@@ -23,7 +23,7 @@ CREATE TABLE animals(
 
 CREATE TABLE adoptions(
   id SERIAL8 primary key,
-  animal_id SERIAL8 references animals(id),
-  owner_id SERIAL8 references owners(id)
+  animal_id SERIAL8 references animals(id) ON DELETE CASCADE,
+  owner_id SERIAL8 references owners(id) ON DELETE CASCADE
 );
 

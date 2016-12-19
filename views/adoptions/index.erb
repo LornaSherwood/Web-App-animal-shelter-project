@@ -1,12 +1,14 @@
 <h1>Adoptions</h1>
 
+<a class="link" href="/adoptions/new">Assign New Owner</a>
+
 <ul>
   <% for adoption in @adoptions %>
     <div class = 'animal'> 
     <li>
-      <p>Owner: <%= adoption.owner.first_name %> <%= adoption.owner.last_name  %></p>
+      <p><a class="link" href="/owners/<%= adoption.owner.id %>"><%= adoption.owner.first_name %> <%= adoption.owner.last_name  %></a></p>
       <img src="<%= adoption.animal.photo %>" alt="animal pic" style="height:150px;width:200px;">
-      <p>Name: <%= adoption.animal.name %></p>
+      <p>Name: <a class="link" href="/animals/<%= adoption.animal.id %>"><%= adoption.animal.name %></a></p>
       <p>Breed: <%= adoption.animal.breed %></p>
       
     </li>
@@ -14,3 +16,4 @@
 
   <% end %>
 </ul>
+

@@ -29,6 +29,11 @@ class Owner
     SqlRunner.run( sql )
   end
 
+  def self.delete(id)
+    sql = "DELETE FROM owners WHERE id = #{id}"
+    SqlRunner.run( sql )
+  end
+
   def self.find_all()
     sql = "SELECT * FROM owners"
     results = SqlRunner.run( sql )

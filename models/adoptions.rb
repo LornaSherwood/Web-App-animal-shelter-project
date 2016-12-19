@@ -25,6 +25,11 @@ class Adoption
     SqlRunner.run( sql )
   end
 
+  def self.delete(id)
+    sql = "DELETE FROM adoptions WHERE id = #{id}"
+    SqlRunner.run( sql )
+  end
+
   def self.find_all()
     sql = "SELECT * FROM adoptions"
     results = SqlRunner.run( sql )

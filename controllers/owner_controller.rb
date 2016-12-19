@@ -24,11 +24,17 @@ post '/owners' do
   erb(:"/owners/create")
 end
 
-#get animal by id (show)
+#get owner by id (show)
 get '/owners/:id' do
   id = params[:id]
   @owner = Owner.find(id)
   erb(:"owners/show")
+end
+
+# delete owner by id
+post '/owners/:id/delete' do
+  Owner.delete( params[:id] )
+  redirect to('/owners')
 end
 
 

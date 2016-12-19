@@ -6,6 +6,10 @@
   <li> <%= @owner.address_3 %></li>
 </ul></p>
 
+<form action="/owners/<%= @owner.id %>/delete" method="post">
+  <input type="submit" value="Delete Owner"> 
+</form>
+
 <p>Animals adopted by <%= @owner.first_name %>:</p>
 <% for animal in @owner.get_animals %>
 <div class = 'animal'> 

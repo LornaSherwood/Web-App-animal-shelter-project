@@ -26,3 +26,16 @@ post '/adoptions' do
   erb(:"adoptions/create")
 end
 
+# delete by id
+post '/adoptions/:id/delete' do
+  Adoption.delete( params[:id] )
+  redirect to('/adoptions')
+end
+
+#get adoption by id (show)
+get '/adoptions/:id' do
+  id = params[:id]
+  @adoption = Adoption.find(id)
+  erb(:"adoptions/show")
+end
+

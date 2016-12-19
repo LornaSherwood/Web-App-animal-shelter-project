@@ -29,6 +29,11 @@ class Animal
     SqlRunner.run( sql )
   end
 
+  def self.delete(id)
+    sql = "DELETE FROM animals WHERE id = #{id}"
+    SqlRunner.run( sql )
+  end
+
   def self.find_all()
     sql = "SELECT * FROM animals"
     results = SqlRunner.run( sql )
@@ -63,6 +68,8 @@ class Animal
      WHERE id='#{options['id']}';"
     SqlRunner.run( sql )
   end
+
+ 
 
 end
 
