@@ -40,14 +40,8 @@ class Animal
     return results.map { |hash| Animal.new( hash ) }
   end
 
-  def self.find_available
-    sql = "SELECT * FROM animals WHERE status = 'Ready for Adoption';"
-    results = SqlRunner.run( sql )
-    return results.map { |hash| Animal.new( hash ) }
-  end
-
-  def self.find_adopted
-    sql = "SELECT * FROM animals WHERE status = 'Adopted';"
+  def self.find_by_status(status) # not used yet
+    sql = "SELECT * FROM animals WHERE status = '#{ status }';"
     results = SqlRunner.run( sql )
     return results.map { |hash| Animal.new( hash ) }
   end
@@ -69,7 +63,18 @@ class Animal
     SqlRunner.run( sql )
   end
 
- 
+
 
 end
 
+# def self.find_available
+#   sql = "SELECT * FROM animals WHERE status = 'Ready for Adoption';"
+#   results = SqlRunner.run( sql )
+#   return results.map { |hash| Animal.new( hash ) }
+# end
+
+# def self.find_adopted
+#   sql = "SELECT * FROM animals WHERE status = 'Adopted';"
+#   results = SqlRunner.run( sql )
+#   return results.map { |hash| Animal.new( hash ) }
+# end
