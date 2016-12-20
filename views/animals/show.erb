@@ -1,13 +1,20 @@
-<h1> Show Animal </h1>
+<h1 class="page_title">Animal</h1>
 
 
 
-<p>Name: <%= @animal.name() %></p>
-<p>Breed: <%= @animal.breed() %></p>
-<p>Admission Date: <%= @animal.admission_date() %></p>
-<p>Status: <%= @animal.status() %></p>
+  <div class="animal_detail">
+  <img class="photo" src="<%= @animal.photo() %>" alt="animal pic" style="height:150px;width:200px;">
+  
+  <p>Name: <%= @animal.name() %></p>
+  <p>Breed: <%= @animal.breed() %></p>
+  <p>Admission Date: <%= @animal.date_format %></p>
+  <p>Status: <%= @animal.status() %></p>
+  <% if @animal.status != "Adopted" %>
+  <p>Duration of stay: <%= @animal.duration %> days</p>
+  <% end %>
 
-<a class="link" href="/animals/<%= @animal.id %>/edit">Edit Details</a>
-<form action="/animals/<%= @animal.id %>/delete" method="post">
-  <input type="submit" value="Delete Animal">
-</form> 
+  <p><a class="link" href="/animals/<%= @animal.id %>/edit">Edit Details</a></p>
+  <p><form action="/animals/<%= @animal.id %>/delete" method="post">
+    <input class="link" type="submit" value="Delete Animal">
+  </form></p>
+</div>

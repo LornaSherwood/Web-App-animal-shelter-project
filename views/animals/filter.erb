@@ -1,6 +1,7 @@
-<h1>Filter on animal status</h1>
+<h1 class="page_title">Filter Animals on Availability</h1>
 
-<form action="/animals/filterresults" method="post">
+
+<form class="form" action="/animals/filter" method="post">
 
 <label>
   Select a status:
@@ -13,7 +14,25 @@
   </select>
 </label>
 
-<input type="submit" value="Submit"> 
+<input type="submit" value="Submit">
 
 </form>
 
+
+<p class="animal_detail">Animals filtered:</p>
+
+<% if @animals == nil %>
+    <p class="status">No status selected</p>
+  <% else %>
+  <% for animal in @animals %>
+    <div class="animal"> 
+    <img src="<%= animal.photo %>" alt="animal pic">
+    <p>Name: <%= animal.name %></p>
+    <p>Admission date: <%= animal.date_format %></p>
+    <p><%= animal.status %></p>
+
+    <p><a href="/animals/<%= animal.id %>">Show animal details</a></p> 
+
+    </div>
+  <% end %>
+<% end %>

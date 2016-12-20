@@ -1,6 +1,7 @@
-<h1>We found a match!</h1>
+<h1 class="page_title">Record an Adoption</h1>
 
-<form action="/adoptions" method="post">
+
+<form class="form" action="/adoptions" method="post">
   <p>
   Select an animal:
   </p>
@@ -8,7 +9,9 @@
     <label>
       <select name="animal_id">
         <% for animal in @animals %>
-        <option value="<%= animal.id %>"><%= animal.name %></option>
+            <% if animal.status == "Ready for Adoption" %>
+          <option value="<%= animal.id %>"><%= animal.name %></option>
+        <% end %>
         <% end %>
       </select>
     </label>

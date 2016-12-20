@@ -1,22 +1,22 @@
-<h1>Add New Animal Details</h1>
+<h1 class="page_title">Add New Animal</h1>
 
-<form action="/animals" method="post">
-  <label>
+<form class="form" action="/animals" method="post">
+  <p><label>
   Name:
   <input type="text" name="name">
-  </label>
+  </label></p>
 
-  <label>
+  <p><label>
   Breed:
   <input type="text" name="breed">
-  </label>
+  </label></p>
 
-  <label>
-  Admission date (YYYY-MM-DD):
+  <p><label>
+  Admission date:
   <input type="date" name="admission_date">
-  </label>
+  </label></p>
 
-  <label>
+  <p><label>
     Select a status:
     <select name="status">
       <option value="Unassessed">Unassessed</option>
@@ -25,12 +25,13 @@
       <option value="Ready for Adoption">Ready for Adoption</option>
       <option value="Adopted">Adopted</option>
     </select>
-  </label>
+  </label></p>
 
+  <p><label>
   Photo:
   <input type="text" name="photo">
-  </label>
+  </label></p>
 
-  <input type="submit" value="Add Animal"> 
+  <p><input type="submit" value="Add Animal"></p>
 
 </form>

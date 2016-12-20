@@ -27,13 +27,15 @@ end
 
 # get filter input form -----------------------
 get '/animals/filter' do
+  # @animals = nil
   erb(:"animals/filter")
 end
 
 #create new filter view ------------------------
-post '/animals/filterresults' do
+post '/animals/filter' do
   @animals = Animal.find_by_status(params[:status])
-  erb(:"/animals/filterresults")
+  erb(:"/animals/filter")
+  # redirect to 'animals/filter'
 end
 
 #get animal by id (show)

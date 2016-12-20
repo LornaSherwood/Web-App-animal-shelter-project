@@ -1,13 +1,196 @@
-.animal {
-  display: inline-block;
-  background-color: ivory;
-  margin: 15px;
-  padding: 15px;
-  border: 3px solid grey;
-  border-radius: 4px;
 
+h1, h3, p {font-family: "Arial Black", Gadget, sans-serif;
+}
+a {color: black;}
+
+a:hover {color: blue;}
+
+/*background*/
+body {
+  background-image: url("/images/grass.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*links*/
+.links {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 12px;
+  padding-left: 0px;
+}
+
+.link {
+  display: inline;
+  border: 1px solid grey;
+  border-radius: 3%;
+  margin: 10px 0px 10px 10px;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  font-size: 12px;
 }
 
 
+/*photos*/
+img {
+  height:150px;
+  width:200px;
+  padding:1px;
+  border:1px solid #021a40;
+}
 
-h1 {font: Helvetica;}
+/*navigation*/
+
+.nav {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 12px;
+  padding-left: 0px;
+}
+
+.nav_link {
+  display: inline;
+  border: 1px solid grey;
+  border-radius: 3%;
+  margin: 10px 0px 10px 10px;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+
+/*banner*/
+
+.banner {
+  text-align: center;
+  border: 1px solid grey;
+  margin: 10px;
+  padding: 10px;
+  background-color: ivory;
+  width: 95%;
+}
+/*page title*/
+.page_title {
+  text-align: center;
+  border: 1px solid grey;
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+/*animal block*/
+.animal {
+  display: inline-block;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  border: 3px solid grey;
+  border-radius: 3%;
+  text-align: center;
+  height: 350px;
+  width: 240px;
+}
+
+/*animal detail*/
+.animal_detail {
+  display: inline-block;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  border: 3px solid grey;
+  border-radius: 3%;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+
+/*owner block*/
+.owner {
+  display: inline-block;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  border: 3px solid grey;
+  border-radius: 3%;
+  text-align: center;
+  height: 160px;
+  width: 18%;
+}
+
+.title {
+  text-decoration: underline;
+}
+
+/*owner detail block*/
+.owner_detail {
+  display: inline-block;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  border: 3px solid grey;
+  border-radius: 3%;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+/*adoption block*/
+.adoption {
+  display: inline-block;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  border: 3px solid grey;
+  border-radius: 3%;
+  text-align: center;
+  height: 350px;
+  width: 18%;
+}
+
+/*form*/
+.form {
+  display: inline-block;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  border: 3px solid grey;
+  border-radius: 3%;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+/*button*/
+.btn {
+  border:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: papayawhip;
+  cursor:pointer;
+  font-family: 'Special Elite', cursive;
+}
+
+.status {
+  display: inline-block;
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  border: 3px solid grey;
+  border-radius: 3%;
+  text-align: center;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+
+
+}

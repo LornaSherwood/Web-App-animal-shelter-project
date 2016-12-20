@@ -6,7 +6,9 @@ class Animal
   attr_accessor :name, :breed, :admission_date, :status, :photo
 
   def initialize( options )
+    # if options['id'] != nil
     @id = nil || options['id'].to_i
+
     @name = options['name']
     @breed = options['breed']
     @admission_date = options['admission_date']
@@ -22,6 +24,12 @@ class Animal
       "
       animal = SqlRunner.run( sql ).first
       @id = animal['id'].to_i
+  end
+
+  def date_format
+    date = @admission_date.split("-")
+    return "#{date[2]}/#{date[1]}/#{date[0]}"
+    
   end
 
   def self.delete_all
@@ -63,6 +71,10 @@ class Animal
     SqlRunner.run( sql )
   end
 
+  def duration
+    duration = Date.today - Date.parse(@admission_date)
+    return duration.to_i
+  end
 
 
 end

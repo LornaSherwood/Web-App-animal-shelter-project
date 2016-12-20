@@ -1,17 +1,18 @@
-<h1>Our Animals</h1>
+<h1 class="page_title">Our Animals</h1>
 
-<p><a href="/animals/new">Add new animal</a></p>
-
-<p><a href="/animals/filter">Filter animals</a></p>
+<ul class="links">
+  <li class="link"><a href="/animals/new">Add new animal</a></li>
+  <li class="link"><a href="/animals/filter">Filter animals</a></li>
+</ul>
 
 <% for animal in @animals %>
-<div class = 'animal'> 
-<img src="<%= animal.photo %>" alt="animal pic" style="height:150px;width:200px;">
-<p>Name: <%= animal.name %></p>
-<p>Admission date: <%= animal.admission_date %></p>
-<p><%= animal.status %></p>
+<div class="animal"> 
+  <img class="photo" src="<%= animal.photo %>" alt="animal pic">
+  <p><%= animal.name %></p>
+  <p><%= animal.status %></p>
+  <p>Admission date: <%= animal.date_format %></p>
 
-<p><a href="/animals/<%= animal.id %>">Show animal details</a></p> 
 
+  <p><a href="/animals/<%= animal.id %>">Show animal details</a></p> 
 </div>
 <% end %>

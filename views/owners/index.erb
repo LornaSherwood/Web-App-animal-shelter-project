@@ -1,19 +1,13 @@
-<h1>Our Owners</h1>
+<h1 class="page_title">Our Owners</h1>
 
-<p><a href="/owners/new">Add new owner</a></p>
+<div class="links">
+  <p class="link"><a href="/owners/new">Add new owner</a></p>
+</div>
 
 <% for owner in @owners %>
-<div class = 'owner'> 
-<hr>
-<p>Name: <%= owner.first_name %> <%= owner.last_name %></p>
-<p>Location: <%= owner.address_2 %> 
-
-
-
-
-<p><a href="/owners/<%= owner.id %>">Show owner details</a></p> 
-
-
-<hr>
-</div>
+  <div class = 'owner'> 
+    <p><%= owner.first_name %> <%= owner.last_name %></p>
+    <p><%= owner.address_2 %> 
+    <p><a href="/owners/<%= owner.id %>">Show details</a></p> 
+  </div>
 <% end %>

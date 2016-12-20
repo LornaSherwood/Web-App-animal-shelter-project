@@ -1,19 +1,24 @@
-<h1>Adoptions</h1>
+<h1 class="page_title" >Adoptions</h1>
 
-<a class="link" href="/adoptions/new">Assign New Owner</a>
+<div class="links">
+<a class="link" href="/adoptions/new">New Adoption</a>
+</div>
 
-<ul>
+
+
   <% for adoption in @adoptions %>
-    <div class = 'animal'> 
-    <li>
-      <p><a class="link" href="/owners/<%= adoption.owner.id %>"><%= adoption.owner.first_name %> <%= adoption.owner.last_name  %></a></p>
-      <img src="<%= adoption.animal.photo %>" alt="animal pic" style="height:150px;width:200px;">
-      <p>Name: <a class="link" href="/animals/<%= adoption.animal.id %>"><%= adoption.animal.name %></a></p>
-      <p>Breed: <%= adoption.animal.breed %></p>
+    <div class = 'adoption'> 
       
-    </li>
+        <img class="photo" src="<%= adoption.animal.photo() %>" alt="animal pic" style="height:150px;width:200px;">
+        <p><a href="/animals/<%= adoption.animal.id %>"><%= adoption.animal.name %></a></p>
+        <p>Breed: <%= adoption.animal.breed %></p>
+        <p>Owner: <a href="/owners/<%= adoption.owner.id %>"><%= adoption.owner.first_name %> <%= adoption.owner.last_name  %></a></p>
+      
+      <form action="/animals/<%= adoption.id %>/delete" method="post">
+        <input type="submit" value="Delete Adoption">
+      </form> 
     </div>
 
   <% end %>
-</ul>
+
 

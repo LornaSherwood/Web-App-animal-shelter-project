@@ -6,18 +6,18 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-<main>
-  <nav>
-    <ul>
-      <li><a href="/animals">Our Animals</a></li>
-      <li><a href="/owners">Our Owners</a></li>
-      <li><a href="/adoptions">Our Adoptions</a></li>
-
-       </ul>
-  </nav>
-  <section class="content">
-  <%= yield %>
-  </section>
+  <main>
+    <h1 class="banner">Scottish Animal Shelter</h1>
+      <nav class="nav">
+        <ul>
+          <li class="nav_link"><a href="/animals">Our Animals</a></li>
+          <li class="nav_link"><a href="/owners">Our Owners</a></li>
+          <li class="nav_link"><a href="/adoptions">Our Adoptions</a></li>
+        </ul>
+      </nav>
+    <section class="content">
+      <%= yield %>
+    </section>
   </main>
 </body>
 </html>

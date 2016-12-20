@@ -1,25 +1,27 @@
-<p>Name: <%= @owner.first_name %> <%= @owner.last_name %></p>
-<p>Address:
-<ul style="list-style-type:none">
-  <li> <%= @owner.address_1 %></li>
-  <li> <%= @owner.address_2 %></li>
-  <li> <%= @owner.address_3 %></li>
-</ul></p>
+<h1 class="page_title">Owner</h1>
 
-<a class="link" href="/owners/<%= @owner.id %>/edit">Edit Details</a>
-<form action="/owners/<%= @owner.id %>/delete" method="post">
-  <input type="submit" value="Delete Owner"> 
-</form>
+<div class="owner_detail">
+  <h3>Name:</h3>
+  <p><%= @owner.first_name %> <%= @owner.last_name %></p>
+  <h3>Address:</h3>
+  <p> <%= @owner.address_1 %></p>
+  <p> <%= @owner.address_2 %></p>
+  <p> <%= @owner.address_3 %></p>
+  
 
-<p>Animals adopted by <%= @owner.first_name %>:</p>
+  <p><a class="link" href="/owners/<%= @owner.id %>/edit">Edit Details</a></p>
+  <p><form action="/owners/<%= @owner.id %>/delete" method="post">
+    <input type="submit" value="Delete Owner"> 
+  </form></p>
+</div>
+
+<h1 class="page_title">Adoption History</h1>
 <% for animal in @owner.get_animals %>
-<div class = 'animal'> 
-<img src="<%= animal.photo %>" alt="animal pic" style="height:150px;width:200px;">
-<p>Name: <%= animal.name %></p>
-<p>Breed: <%= animal.breed %></p>
-<p>Admission date: <%= animal.admission_date %></p>
+<div class = 'animal_detail'> 
+  <img src="<%= animal.photo %>" alt="animal pic" style="height:150px;width:200px;">
 
-<p><a href="/animals/<%= animal.id %>">Show animal details</a></p> 
-
+  <p>Name: <%= animal.name() %></p>
+  <p>Breed: <%= animal.breed() %></p>
+  
 </div>
 <% end %>
