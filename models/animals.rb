@@ -22,14 +22,13 @@ class Animal
       VALUES ('#{name}', '#{breed}', '#{admission_date}', '#{status}', '#{photo}')
       RETURNING *;
       "
-      animal = SqlRunner.run( sql ).first
-      @id = animal['id'].to_i
+    animal = SqlRunner.run( sql ).first
+    @id = animal['id'].to_i
   end
 
   def date_format
     date = @admission_date.split("-")
     return "#{date[2]}/#{date[1]}/#{date[0]}"
-    
   end
 
   def self.delete_all
@@ -62,12 +61,12 @@ class Animal
 
   def self.update(options)
     sql = "UPDATE animals SET
-     name = '#{options['name']}',
-     breed = '#{options['breed']}',
-     admission_date = '#{options['admission_date']}',
-     status = '#{options['status']}',
-     photo = '#{options['photo']}'
-     WHERE id='#{options['id']}';"
+      name = '#{options['name']}',
+      breed = '#{options['breed']}',
+      admission_date = '#{options['admission_date']}',
+      status = '#{options['status']}',
+      photo = '#{options['photo']}'
+      WHERE id='#{options['id']}';"
     SqlRunner.run( sql )
   end
 
@@ -76,17 +75,4 @@ class Animal
     return duration.to_i
   end
 
-
 end
-
-# def self.find_available
-#   sql = "SELECT * FROM animals WHERE status = 'Ready for Adoption';"
-#   results = SqlRunner.run( sql )
-#   return results.map { |hash| Animal.new( hash ) }
-# end
-
-# def self.find_adopted
-#   sql = "SELECT * FROM animals WHERE status = 'Adopted';"
-#   results = SqlRunner.run( sql )
-#   return results.map { |hash| Animal.new( hash ) }
-# end

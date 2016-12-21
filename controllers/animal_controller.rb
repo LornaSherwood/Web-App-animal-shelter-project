@@ -5,11 +5,9 @@ require_relative('../models/animals')
 require_relative('../models/owners')
 require_relative('../models/adoptions')
 
-
 #get all animals (index)
 get '/animals' do
   @animals = Animal.find_all
-  #@animals = Animal.find_by_status(params)
   erb(:"animals/index")
 end
 
@@ -25,17 +23,15 @@ post '/animals' do
   erb(:"/animals/create")
 end
 
-# get filter input form -----------------------
+# get filter input form
 get '/animals/filter' do
-  # @animals = nil
   erb(:"animals/filter")
 end
 
-#create new filter view ------------------------
+#create new filter view
 post '/animals/filter' do
   @animals = Animal.find_by_status(params[:status])
   erb(:"/animals/filter")
-  # redirect to 'animals/filter'
 end
 
 #get animal by id (show)
@@ -50,7 +46,6 @@ post '/animals/:id/delete' do
   Animal.delete( params[:id] )
   redirect to('/animals')
 end
-
 
 # edit animal form
 get '/animals/:id/edit' do

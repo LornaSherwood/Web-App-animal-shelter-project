@@ -5,7 +5,6 @@ require_relative('../models/animals')
 require_relative('../models/owners')
 require_relative('../models/adoptions')
 
-
 #get all adoptions (index)
 get '/adoptions' do
   @adoptions = Adoption.find_all()

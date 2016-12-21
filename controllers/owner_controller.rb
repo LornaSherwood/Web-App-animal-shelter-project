@@ -5,7 +5,6 @@ require_relative('../models/owners')
 require_relative('../models/animals')
 require_relative('../models/adoptions')
 
-
 #get all animals (index)
 get '/owners' do
   @owners = Owner.find_all()
@@ -39,8 +38,8 @@ end
 
 # edit owner form
 get '/owners/:id/edit' do
- @owner = Owner.find(params[:id])
- erb(:"owners/edit")
+  @owner = Owner.find(params[:id])
+  erb(:"owners/edit")
 end
 
 # update owner by id
