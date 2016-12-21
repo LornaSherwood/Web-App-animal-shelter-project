@@ -12,6 +12,31 @@ body {
   background-size: cover;
 }
 
+/*banner*/
+.banner {
+  text-align: center;
+  border: 6px black;
+  border-style: double;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  width: 95%;
+  display: inline-block;
+}
+
+.banner_text {
+  font-family: 'Russo One', sans-serif;
+  font-size: 36px;
+}
+
+.banner img {
+  float: left;
+  height: 77px;
+  width: 102px;
+  margin: none;
+  border: none;
+}
+
 /*links*/
 .links {
   font-family: "Arial Black", Gadget, sans-serif;
@@ -21,8 +46,8 @@ body {
 
 .link {
   display: inline;
-  border: 1px solid grey;
-  border-radius: 3%;
+  border: 1px solid black;
+  border-radius: 3px;
   margin: 10px 0px 10px 10px;
   padding: 10px;
   background-color: white;
@@ -36,7 +61,7 @@ img {
   height:150px;
   width:200px;
   padding:1px;
-  border:1px solid #021a40;
+  border:1px solid black;
 }
 
 /*navigation*/
@@ -51,20 +76,10 @@ ul {
 }
 
 
-/*banner*/
-
-.banner {
-  text-align: center;
-  border: 1px solid grey;
-  margin: 10px;
-  padding: 10px;
-  background-color: ivory;
-  width: 95%;
-}
 /*page title*/
 .page_title {
   text-align: center;
-  border: 1px solid grey;
+  border: 2px solid black;
   margin: 20px;
   padding: 10px;
   background-color: white;
@@ -79,8 +94,8 @@ ul {
   background-color: white;
   margin: 15px;
   padding: 15px;
-  border: 3px solid grey;
-  border-radius: 3%;
+  border: 2px solid black;
+  border-radius: 4px;
   text-align: center;
   height: 350px;
   width: 240px;
@@ -92,8 +107,8 @@ ul {
   background-color: white;
   margin: 15px;
   padding: 15px;
-  border: 3px solid grey;
-  border-radius: 3%;
+  border: 2px solid black;
+  border-radius: 4px;
   text-align: center;
   width: 50%;
   margin-left: 25%;
@@ -107,8 +122,8 @@ ul {
   background-color: white;
   margin: 15px;
   padding: 15px;
-  border: 3px solid grey;
-  border-radius: 3%;
+  border: 2px solid black;
+  border-radius: 4px;
   text-align: center;
   height: 160px;
   width: 18%;
@@ -124,8 +139,8 @@ ul {
   background-color: white;
   margin: 15px;
   padding: 15px;
-  border: 3px solid grey;
-  border-radius: 3%;
+  border: 2px solid black;
+  border-radius: 4px;
   text-align: center;
   width: 50%;
   margin-left: 25%;
@@ -138,8 +153,8 @@ ul {
   background-color: white;
   margin: 15px;
   padding: 15px;
-  border: 3px solid grey;
-  border-radius: 3%;
+  border: 2px solid black;
+  border-radius: 4px;
   text-align: center;
   height: 350px;
   width: 18%;
@@ -151,8 +166,8 @@ ul {
   background-color: white;
   margin: 15px;
   padding: 15px;
-  border: 3px solid grey;
-  border-radius: 3%;
+  border: 2px solid black;
+  border-radius: 4px;
   text-align: center;
   width: 50%;
   margin-left: 25%;
@@ -164,8 +179,9 @@ ul {
   background-color: white;
   margin: 15px;
   padding: 15px;
-  border: 3px solid grey;
-  border-radius: 3%;
+  border: 2px solid gray;
+  color: gray;
+  border-radius: 4px;
   text-align: center;
   width: 20%;
   margin-left: 40%;
