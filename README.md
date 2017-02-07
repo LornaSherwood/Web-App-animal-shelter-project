@@ -38,3 +38,8 @@ CRUD actions for animals/owners
 Have separate pages for animals ready for adoption and ones still in training/vet care
 Search for animals by breed/type
 Any other ideas you might come up with
+
+Improvements:
+
+There are 3 sql tables where only 2 are necessary.
+There are two places where an adoption is recorded which could lead to a mismatch.
